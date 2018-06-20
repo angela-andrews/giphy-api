@@ -1,2 +1,5 @@
 .DS_store
 scratch.js
+giphy-api.html
+# Ignore ajax examples folder
+ajax/
