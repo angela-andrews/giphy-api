@@ -1,0 +1,19 @@
+body {
+    background: url("../../assets/images/fabric_of_squares_gray.png")antiquewhite;
+    background-size: cover;
+}
+
+.heading{
+    text-align: center;
+}
+
+.displayGifsBtn {
+
+   color: white;
+   background-color: gray;
+   border-radius: 5px;
+   margin: 0 5px;
+   padding: 4px;
+
+
+}
