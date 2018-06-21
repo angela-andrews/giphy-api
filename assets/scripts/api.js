@@ -35,7 +35,7 @@ makeButtons();
 
   $(document).on("click",".displayGifsBtn", function(){
     var getGiphys = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + getGiphys + "&api_key=" + mykey +"&limit=10&rating=g&";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + getGiphys + "&api_key=dc6zaTOxFJmzC&limit=10&rating=g&";
     var api = 
     //console.log(getGiphys);
    
