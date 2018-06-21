@@ -1,4 +1,4 @@
-var mykey = config.MY_KEY;
+
 
 //topics
 var topics = ["Janet Jackson","Low Down Dirty Shame","Beyonce", "Blackish", "Game Of Thrones","Curb Your Enthusiam","Sons of Anarchy","ANTM","Eye roll", "Black Panther"];
