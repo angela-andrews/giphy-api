@@ -84,7 +84,8 @@ $(document).on("click",".animate", function(){
     if (state ==="still"){
         //alert("my state is " + state);
         console.log(this);
-        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).removeAttr("date-state");
+        $(this).attr("src", $(this).attr("data-animated"));
         $(this).attr("date-state", "animate");
     } else{
         //alert("my state is " + state);
