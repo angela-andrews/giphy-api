@@ -17,3 +17,9 @@ body {
 
 
 }
+#displayGifs {
+    width: 400px;
+    border: 1px red solid;
+    margin-left: 300px;
+    margin-top: 25px;
+}
