@@ -1,3 +1,5 @@
+var mykey = config.MY_KEY;
+
 //topics
 var topics = ["Janet Jackson","Low Down Dirty Shame","Beyonce", "Blackish", "Game Of Thrones","Curb Your Enthusiam","Sons of Anarchy","ANTM","Eye roll", "Black Panther"];
 
@@ -25,7 +27,6 @@ makeButtons();
     
     var moreTopics = $("#search").val().trim();
     topics.push(moreTopics);
-    //console.log(moreTopics);
     makeButtons();
     //testApi();
     }); //end push to topics function
@@ -34,10 +35,10 @@ makeButtons();
 
   $(document).on("click",".displayGifsBtn", function(){
     var getGiphys = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + getGiphys + "&api_key="PUT KEY HERE "&limit=10&rating=g&";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + getGiphys + "&api_key=" + mykey +"&limit=10&rating=g&";
     var api = 
-    console.log(getGiphys);
-    console.log(queryURL);
+    //console.log(getGiphys);
+   
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -70,8 +71,7 @@ makeButtons();
                 //append gif to imgdiv
                 $("#displayGifs").prepend(imgDiv);
                 //prepend imgdivs to the page
-                console.log("Animated URL " +animatedImgsURL);
-                console.log("Static URL " +staticImgsURL);
+                
 
             }; //end for Loop 
         
@@ -79,14 +79,16 @@ makeButtons();
     }) //end repsonse   
 
 }); //findGifs on click function
-$("body").on("click",".animate", function(){
+$(document).on("click",".animate", function(){
     var state = $(this).attr("data-state");
     if (state ==="still"){
-        alert("my state is " + state);
+        //alert("my state is " + state);
+        console.log(this);
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("date-state", "animate");
     } else{
-        alert("my state is " + state);
+        //alert("my state is " + state);
+        console.log(this);
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
     }
