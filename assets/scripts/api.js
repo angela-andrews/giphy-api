@@ -52,26 +52,37 @@ makeButtons();
                 var imgDiv = $("<div>");
                 //create p tags for ratings text
                 var ratingP = $("<p>").text("Rating: " + returned[j].rating);
+                var title = $("<p>").text("Title: " + returned[j].title);
                 //create the img placeholder
                 var gifImg = $("<img>");
                 gifImg.attr("src", returned[j].images.fixed_height_still.url);
                 //add attr of still image
                 gifImg.attr("data-state", "still");
-                gifImg.attr("data-still", staticImgsURL );
-                gifImg.attr("data-animated", animatedImgsURL );
+                
                 gifImg.addClass("animate");
                 //add atr of data-state
                 var staticImgsURL= (returned[j].images.fixed_height_still.url);
                 //put static img url in var
                 var animatedImgsURL=(returned[j].images.fixed_height.url);
+
+
+                //--------------------------
+                //------------------------------------
+                gifImg.attr("data-still", staticImgsURL );
+                gifImg.attr("data-animated",animatedImgsURL  );
+                //------------------------------------------
+
+                //-------------------------------
                 //append rating to imgdiv
                 imgDiv.append(gifImg);
                 //put animated img url in var
                 imgDiv.append(ratingP);
+                imgDiv.append(title);
                 //append gif to imgdiv
                 $("#displayGifs").prepend(imgDiv);
                 //prepend imgdivs to the page
-                
+                console.log(staticImgsURL);
+                console.log(animatedImgsURL);
 
             }; //end for Loop 
         
@@ -82,14 +93,13 @@ makeButtons();
 $(document).on("click",".animate", function(){
     var state = $(this).attr("data-state");
     if (state ==="still"){
-        //alert("my state is " + state);
         console.log(this);
-        $(this).removeAttr("date-state");
+        $(this).removeAttr("data-state");
         $(this).attr("src", $(this).attr("data-animated"));
         $(this).attr("date-state", "animate");
     } else{
-        //alert("my state is " + state);
         console.log(this);
+        $(this).removeAttr("data-state");
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
     }
