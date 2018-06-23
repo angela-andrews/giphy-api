@@ -1,7 +1,7 @@
 
 
 //topics
-var topics = ["Janet Jackson","Low Down Dirty Shame","Beyonce", "Blackish", "Game Of Thrones","Curb Your Enthusiam","Sons of Anarchy","ANTM","Eye roll", "Black Panther"];
+var topics = ["Janet Jackson","Low Down Dirty Shame","Beyonce", "Blackish", "Game Of Thrones","Curb Your Enthusiam","Sons of Anarchy","ANTM","Eye roll", "Chadwick Boseman"];
 
 
 
@@ -52,6 +52,8 @@ makeButtons();
                 var imgDiv = $("<div>");
                 //create p tags for ratings text
                 var ratingP = $("<p>").text("Rating: " + returned[j].rating);
+                
+
                 var title = $("<p>").text("Title: " + returned[j].title);
                 //create the img placeholder
                 var gifImg = $("<img>");

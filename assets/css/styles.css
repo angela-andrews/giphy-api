@@ -5,12 +5,23 @@ body {
 
 p{
     font-size: 1.3em;
+    font-variant: small-caps;
+    display: block;
+    width: 310px;
 }
 
 .heading{
     text-align: center;
 }
 
+#gifBtn{
+    margin: 0 auto;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
 .displayGifsBtn {
 
    color: white;
@@ -18,17 +29,39 @@ p{
    border-radius: 5px;
    margin: 0 5px;
    padding: 4px;
-
-
+ 
 }
+
+
 #displayGifs { 
     margin-top: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: space-around;
+    flex-wrap: wrap;
+    
+    
 }
 
 #formSpace{
-    margin-top: 35px;
+    /* margin-top: 35px; */
+    
+    margin: 35px 40%;
+    
+}
+
+#findGifs{
+    width: 151px;
+    margin-top: 10px;
+    background-color: gray;
+    color: white;
+
+    
 }
 .animate{
     margin: 10px 0;
     padding-bottom: 10px;
+}
+img {
+    width: 350px;
 }
