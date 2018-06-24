@@ -65,3 +65,10 @@ p{
 img {
     width: 350px;
 }
+input[type="text"] {
+        color: rgb(148, 144, 144);
+        font-size: .8em;
+        height: 30px;
+        width: 151px;
+        border-radius: 5px;
+}
